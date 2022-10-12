@@ -5,6 +5,9 @@ char shiftChar(char c, int rshift){
   if(c>=65&&c<=90){
     if(c+rshift>90){
       int temp=(c+rshift)-90;
+      while(temp>26){
+	temp=temp%26;
+      }
       c=64+temp;
     }
     else{
@@ -16,6 +19,9 @@ char shiftChar(char c, int rshift){
   else if(c>=97&&c<=122){
     if(c+rshift>122){
       int temp=(c+rshift)-122;
+      while(temp>26){
+	temp=temp%26;
+      }
       c=96+temp;
     }
     else{

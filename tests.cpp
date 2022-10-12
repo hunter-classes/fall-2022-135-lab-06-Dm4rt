@@ -2,6 +2,7 @@
 #include "doctest.h"
 #include "funcs.h"
 #include "caesar.h"
+#include "vigenere.h"
 
 // add your tests here
 TEST_CASE("shiftChar"){
@@ -13,6 +14,6 @@ TEST_CASE("shiftChar"){
 }
 
 TEST_CASE("encryptCaesar"){
-  CHECK(encryptCaesar("Way to Go!", 5) == "Bfd yt Lt!");
-  CHECK(encryptCaesar("Hello, World!", 10) == "Rovvy, Gybvn!");
+  CHECK(encryptVigenere("Hello, World!", "cake") == "Jevpq, Wyvnd!");
+  CHECK(encryptVigenere("GEEKSFORGEEKS", "ayush") == "GCYCZFMLYLEIM");
 }
